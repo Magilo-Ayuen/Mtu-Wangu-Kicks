@@ -1,0 +1,516 @@
+/* 
+    -------------- TYPOGRAPHY -------------
+    FONT SIZES
+    12px / 16px / 20px / 24px / 32px / 40px / 48px / 62px
+
+    FONT WEIGHTS
+    400 / 700 - Headings/Paragraphs
+
+    LINE HEIGHTS
+    1.2 / 1.5
+
+    LETTER SPACING
+    0 / -2px
+
+    FONT FAMILY 
+    Poppins
+
+
+    -------------- COLORS -------------
+    PRIMARY COLORS
+    1. #f8f9fa
+
+
+    SECONDARY COLORS
+    1. #e9ecef
+
+    TERTIARY COLORS
+
+    GREY COLORS
+    1. #343a40
+
+
+    -------------- BORDER RADIUS -------------
+
+
+    -------------- SPACING SYSTEM -------------
+    5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px / 250px / 300px / 400px / 500px
+
+ */
+
+
+
+ /* ---------------------- GLOBAL STYLES -------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+a {
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #343a40;
+}
+#btn {
+    padding: 20px 40px;
+    /* background-color: red; */
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: #fff;
+    border: 3px solid white;
+
+    font-weight: 600;
+    background: transparent;
+
+
+    margin-left: 50px;
+
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+#btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: 0.5s;
+    z-index: -1;
+}
+#btn:hover::before {
+    width: 100%;
+}
+#btn:hover {
+    color: #343a40;
+}
+
+
+
+/* --------- COMPONENTS ------------- */
+
+/* put those things that are going to be reused here - btns */
+
+
+
+/* ----------------- HEADER ------------------ */
+.header {
+    background-image: url(iMAGES/Shoe-Display-Ideas-17.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* margin-bottom: 30px; */
+    height: 80vh;
+    margin-top: 0px;
+    z-index: 1000;
+    background-blend-mode: multiply; /*MAKES THE LINEAR GRADIENT TO BLEND WITH BG IMAGE*/
+    background-color: rgba(0, 0, 0, .6);
+}
+.container {
+    max-width: 1800px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+    /* height: 100vh;  */
+    overflow: auto; /*THIS CORRECT VIEWPORT INCREASE AFTER POSITION: FIXED*/
+}
+.con-navbar {
+    margin-bottom: 100px;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 300px;
+}
+.navbar {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+    z-index: 1000; /*Makes things not to overlap into a fixed pstioned nav */
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    transition: background-color .4s ease-in-out; /* smooth transition*/
+    left: 0;
+    right: 0;
+}
+.navbar.scrolled {
+    background-color: #343a40;
+    width: 100%;
+    opacity: 0.98;
+    /* BELOW: MAKES THE HEADER EXTEND TO ENDS */
+    left: 0;
+    right: 0;
+}
+.linkNavs.scrolled {
+    color: black;
+}
+#logo {
+    height: 95px;
+    padding: 0 20px;
+}
+.logo {
+    width: 30px; 
+    /* padding-left: 30px;  */
+    padding: 0 20px;
+}
+nav {
+    /*this two expressions take NAV to the right side of the site*/ 
+    flex: 1;
+    text-align: right;
+    list-style: none;
+    /* centering a div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 250px;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li a {
+    color: white;
+    margin: 0 10px;
+}
+.nav-ends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    /* THIS FILTER PROPERTY CHANGES SVG ICON COLOR */
+    filter: brightness(0) invert(1);
+}
+.nav-ends img {
+    margin:  0px 20px ;
+    width: 30px;
+}
+.nav-ends.scrolled{
+    filter: brightness(0%);
+}
+.row {
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 100px;
+}
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    /* margin-bottom: 50px; */
+   
+}
+
+/* HERO SECTION */
+.hero {
+    border: 1px solid purple;
+}
+.hero-heading {
+    color: white;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+.hero-p {
+    color: white;
+    margin-bottom: 90px;
+    margin-left: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: x-large;
+
+}
+
+.hyphen {
+    padding: 20px;
+    filter: brightness(1) invert(0);
+}
+.mtuwangu {
+    color: yellow;
+}
+
+
+/* DELIVERY | SERVICE 24/7 | GREAT OFFERS AVAILABLE  */
+.services {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #343a40;
+    margin-bottom: 100px;
+    flex-basis: 30px;
+    text-align: center;
+}
+.delivery {
+    color: yellow;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.service-time h2{
+    color: yellow;
+    margin-bottom: 20px;
+}
+.service-time p {
+    color: white;
+    font-weight: 400;
+    line-height: 1.9;
+}
+.offers-avail h2{
+    color: yellow;
+    margin-bottom: 20px;
+}
+.offers-avail p {
+    color: white;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+/* ---------- FEATURED PRODUCTS ---------- */
+
+
+.col-3 {
+    /* width: 80px; */
+    max-width: 1000px;
+
+           /* from out */
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+/* .col-3 img {
+    width: 300px;
+    margin: 30px;
+} */
+ .col-3 img {
+    width: 100%;
+ }
+ .col-3:hover {
+    /*Makes the images to shake on Y-asix*/
+    transform: translateY(-6px);
+}
+ .headings {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.headings::after {
+    content: '';
+    /* background: #ff523b; */
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+ .small-container {
+    max-width: 1380px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img {
+    width: 100%;
+}
+.col-4:hover {
+    /*Makes the images to shake on Y-asix*/
+    transform: translateY(-6px);
+}
+
+
+/* ------OFFER -------- */
+
+.offer { 
+    background-color: #343a40;
+    padding: 20px 40px;
+
+    
+}
+.offer-h{
+    margin: 20px;
+    color: #fff;
+}
+.offer-p{
+    margin: 20px;
+    line-height: 1.6;
+    color: #fff;
+}
+#btn-cta {
+    padding: 10px 30px;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* ------- FOOTER --------- */
+
+.footer {
+    width: 100%;
+    border: 1px solid red;
+    background-color: #f1f3f5;
+    padding: 0px 0 20px;
+    color: #fff;
+    height: 650px;
+    /* position: fixed; */
+
+}
+.footer-h {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+.footer-col-1 {
+    flex-basis: 50px;
+    color: #343a40;
+    text-align: center;
+}
+.footer .row {
+    margin-bottom: 70px;
+}
+.vertical-line {
+    width: 1px;
+    height: 400px;
+    background-color: #343a40;
+}
+.copyright {
+    text-align: center;
+    margin: 20px;
+    font-weight: 500;
+    color: #343a40;
+}
+.social-media ul li{
+    list-style: none;
+}
+.social-media ul li a {
+    color: #343a40;
+    letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 2;
+}
+.useful-links ul li{
+    list-style: none;
+}
+.useful-links ul li a {
+    color: #343a40;
+    letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 2;
+}
+
+/* CONTACT FORM CSS  */
+
+.contact-con {
+    border: 1px solid #343a40;
+    margin: 40px 500px;
+    display: block;
+}
+.contact-div {
+ /* border: 1px solid red; */
+ display: inline-block;
+ align-items: center;
+ margin-left: 40%;
+ margin-bottom: 30px;
+}
+.contact-div h2 {
+    font-weight: 700;
+    margin: 10px;
+    line-height: 2;
+    align-items: center;
+}
+.contact-div h4 {
+    font-weight: 600;
+    align-items: center;
+    line-height: 1.9;
+}
+.contact-div .infoEmail {
+    margin-left: -20%;
+    margin-bottom: 10px;
+}
+.tel {
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.contact-form {
+    display: block;
+}
+input {
+    margin: 10px 40px ;
+    font-size: 20px;
+}
+#nameU {
+    width: 350px;
+    height: 50px;
+    padding: 5px;
+}
+#emailU {
+    width: 330px;
+    height: 50px;
+    padding: 5px;
+}
+textarea {
+    display: block;
+    width: 90%;
+    margin: 40px;
+    padding: 10px;
+}
+
+
+/* ABOUT TRUEKICKS {THIS IS THE ABOUT SECTION CSS */
+
+.aboutUS-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #343a40;
+    margin-bottom: 50px;
+    background-size: contain;
+}
+.aboutUS {
+    border: 1px solid red;
+    padding: 10px;
+    width: 800px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+}
+.aboutUS pre{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0px;
+}
