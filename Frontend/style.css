@@ -135,7 +135,6 @@ a {
     margin-bottom: 300px;
 }
 .navbar {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,8 +167,9 @@ a {
     padding: 0 20px;
 }
 .logo {
+    display: flex; 
+    align-items: center;
     width: 30px; 
-    /* padding-left: 30px;  */
     padding: 0 20px;
 }
 nav {
@@ -213,7 +213,6 @@ nav ul li a {
     filter: brightness(0%);
 }
 .row {
-    border: 1px solid green;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -228,9 +227,7 @@ nav ul li a {
 }
 
 /* HERO SECTION */
-.hero {
-    border: 1px solid purple;
-}
+
 .hero-heading {
     color: white;
     font-weight: 900;
@@ -381,7 +378,6 @@ nav ul li a {
 
 .footer {
     width: 100%;
-    border: 1px solid red;
     background-color: #f1f3f5;
     padding: 0px 0 20px;
     color: #fff;
@@ -434,12 +430,10 @@ nav ul li a {
 /* CONTACT FORM CSS  */
 
 .contact-con {
-    border: 1px solid #343a40;
     margin: 40px 500px;
     display: block;
 }
 .contact-div {
- /* border: 1px solid red; */
  display: inline-block;
  align-items: center;
  margin-left: 40%;
@@ -489,6 +483,12 @@ textarea {
     padding: 10px;
 }
 
+/* --- CONTACT.HTML --- */
+.top {
+    height: 102px;
+    width: 100%;
+    background-color: #343a40;
+}
 
 /* ABOUT TRUEKICKS {THIS IS THE ABOUT SECTION CSS */
 
@@ -500,7 +500,6 @@ textarea {
     background-size: contain;
 }
 .aboutUS {
-    border: 1px solid red;
     padding: 10px;
     width: 800px;
     color: #fff;
